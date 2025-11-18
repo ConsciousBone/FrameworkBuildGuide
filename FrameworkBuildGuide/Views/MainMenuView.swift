@@ -14,7 +14,7 @@ struct MainMenuView: View {
             Form {
                 Section {
                     NavigationLink {
-                        Text("fw12")
+                        FW12MenuView()
                     } label: {
                         Label("Framework 12", systemImage: "laptopcomputer")
                     }
@@ -22,7 +22,7 @@ struct MainMenuView: View {
                 
                 Section {
                     NavigationLink {
-                        Text("fw13")
+                        FW13MenuView()
                     } label: {
                         Label("Framework 13", systemImage: "laptopcomputer")
                     }
@@ -30,7 +30,7 @@ struct MainMenuView: View {
                 
                 Section {
                     NavigationLink {
-                        Text("fw16")
+                        FW16MenuView()
                     } label: {
                         Label("Framework 16", systemImage: "laptopcomputer")
                     }
