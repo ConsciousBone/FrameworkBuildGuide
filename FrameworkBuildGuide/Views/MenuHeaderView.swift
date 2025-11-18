@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct MenuHeaderView: View {
+    let viewIndex: Int
+    
     var body: some View {
-        ZStack {
-            Color.blue
-                .ignoresSafeArea()
-            Text("Menu header view")
-                .foregroundStyle(.white)
-                .font(.title)
+        if viewIndex == 0 {
+            ZStack {
+                Color.blue
+                    .ignoresSafeArea()
+                Text("Menu header view")
+                    .foregroundStyle(.white)
+                    .font(.title)
+            }
+        } else if viewIndex == 1 {
+            ZStack {
+                Color.red
+                    .ignoresSafeArea()
+                Text("FW12 header view")
+                    .foregroundStyle(.white)
+                    .font(.title)
+            }
         }
     }
 }
 
 #Preview {
-    MenuHeaderView()
+    MenuHeaderView(viewIndex: 0)
 }

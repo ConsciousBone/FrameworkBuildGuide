@@ -9,37 +9,99 @@ import SwiftUI
 
 struct MainMenuView: View {
     //TODO: replace the systemimages with actual images of the laptop also decorate the view more somehow
+    let gridColumns = Array(repeating: GridItem(.flexible()), count: 2)
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                MenuHeaderView()
+                MenuHeaderView(viewIndex: 0)
                     .frame(maxHeight: UIScreen.main.bounds.height / 4) // 1/4 of screen
-                Form {
-                    Section {
+                ScrollView {
+                    LazyVGrid(columns: gridColumns) {
                         NavigationLink {
                             FW12MenuView()
                         } label: {
-                            Label("Framework 12", systemImage: "laptopcomputer")
+                            VStack {
+                                Image("FW12-Icon")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 200)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                                Text("Framework 12")
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color(.systemBackground))
+                            .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
-                    }
-                    
-                    Section {
+                        .padding()
+                        
                         NavigationLink {
                             FW13MenuView()
                         } label: {
-                            Label("Framework 13", systemImage: "laptopcomputer")
+                            VStack {
+                                Image("FW13-Icon")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 200)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                                Text("Framework 13")
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color(.systemBackground))
+                            .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
-                    }
-                    
-                    Section {
+                        .padding()
+                        
                         NavigationLink {
                             FW16MenuView()
                         } label: {
-                            Label("Framework 16", systemImage: "laptopcomputer")
+                            VStack {
+                                Image("FW16-Icon")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 200)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                                Text("Framework 16")
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color(.systemBackground))
+                            .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
+                        .padding()
+                        
+                        NavigationLink {
+                            Text("not a clue m8")
+                        } label: {
+                            VStack {
+                                RoundedRectangle(cornerRadius: 20)
+                                    .aspectRatio(1, contentMode: .fit)
+                                    .frame(maxWidth: 200)
+                                    .overlay {
+                                        Image(systemName: "magnifyingglass")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(maxWidth: 75)
+                                            .foregroundStyle(.foreground)
+                                    }
+                                Text("Find my model")
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color(.systemBackground))
+                            .clipShape(RoundedRectangle(cornerRadius: 24))
+                        }
+                        .padding()
                     }
+                    .padding()
                 }
+                .background(Color(.systemGroupedBackground))
             }
+            .navigationTitle("Main menu")
+            // hide title, still shows when user holds back button tho
+            .toolbar(.hidden)
         }
     }
 }
