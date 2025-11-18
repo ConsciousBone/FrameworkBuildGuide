@@ -40,6 +40,8 @@ struct FW12MenuView: View {
                 } // cant grab the actual url rn cause i have no internet ;-;
             }
         }
+        .navigationTitle("Framework 12")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

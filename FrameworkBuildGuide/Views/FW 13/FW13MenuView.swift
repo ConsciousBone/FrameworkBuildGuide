@@ -40,6 +40,8 @@ struct FW13MenuView: View {
                 } // cant grab the actual url rn cause i have no internet ;-;
             }
         }
+        .navigationTitle("Framework 13")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -40,6 +40,8 @@ struct FW16MenuView: View {
                 }
             }
         }
+        .navigationTitle("Framework 16")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
