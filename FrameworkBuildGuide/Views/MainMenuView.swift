@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainMenuView.swift
 //  FrameworkBuildGuide
 //
 //  Created by Evan Plant on 18/11/2025.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainMenuView: View {
+    //TODO: replace the systemimages with actual images of the laptop also decorate the view more somehow
     var body: some View {
         NavigationStack {
             Form {
-                //TODO: replace the systemimages with actual images of the laptop, also decorate the view more somehow
                 Section {
                     NavigationLink {
                         Text("fw12")
@@ -41,5 +41,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainMenuView()
 }
