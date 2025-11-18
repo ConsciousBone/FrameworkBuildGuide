@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FW12MenuView: View {
+    @Environment(\.openURL) private var openURL
+    
     var body: some View {
         Form {
             Section {
@@ -26,9 +28,17 @@ struct FW12MenuView: View {
                 }
             }
             
-            //Section {
-                // buy parts thingy here at some point
-            //}
+            Section {
+                Button {
+                    if #available(iOS 26, *) {
+                        openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
+                    } else {
+                        openURL(URL(string: "https://frame.work/")!)
+                    }
+                } label: {
+                    Label("Buy parts", systemImage: "cart")
+                } // cant grab the actual url rn cause i have no internet ;-;
+            }
         }
     }
 }
