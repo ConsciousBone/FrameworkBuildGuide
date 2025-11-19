@@ -17,6 +17,9 @@ struct MainMenuView: View {
                 MenuHeaderView(viewIndex: 0)
                     .frame(maxHeight: UIScreen.main.bounds.height / 4) // 1/4 of screen
                 ScrollView {
+                    Text("Select your model:")
+                        .padding(.top, 40)
+                        .font(.title2)
                     LazyVGrid(columns: gridColumns) {
                         NavigationLink {
                             FW12MenuView()
@@ -34,6 +37,7 @@ struct MainMenuView: View {
                             .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
+                        .buttonStyle(.plain)
                         .padding()
                         
                         NavigationLink {
@@ -52,6 +56,7 @@ struct MainMenuView: View {
                             .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
+                        .buttonStyle(.plain)
                         .padding()
                         
                         NavigationLink {
@@ -70,6 +75,7 @@ struct MainMenuView: View {
                             .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
+                        .buttonStyle(.plain)
                         .padding()
                         
                         NavigationLink {
@@ -77,6 +83,7 @@ struct MainMenuView: View {
                         } label: {
                             VStack {
                                 RoundedRectangle(cornerRadius: 20)
+                                    .foregroundStyle(Color(.secondarySystemFill))
                                     .aspectRatio(1, contentMode: .fit)
                                     .frame(maxWidth: 200)
                                     .overlay {
@@ -93,6 +100,7 @@ struct MainMenuView: View {
                             .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
+                        .buttonStyle(.plain)
                         .padding()
                     }
                     .padding()
