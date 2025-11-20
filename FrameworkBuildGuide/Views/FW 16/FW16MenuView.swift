@@ -11,37 +11,43 @@ struct FW16MenuView: View {
     @Environment(\.openURL) private var openURL
     
     var body: some View {
-        Form {
-            Section {
-                NavigationLink {
-                    Text("aaaaghh")
-                } label: {
-                    Label("New build", systemImage: "truck.box")
-                }
-            }
+        VStack(spacing: 0) {
+            MenuHeaderView(
+                title: "Framework 16",
+                image: "FW16-Header"
+            )
+            .frame(maxHeight: UIScreen.main.bounds.height / 4)
             
-            Section {
-                NavigationLink {
-                    Text("more aaahhh")
-                } label: {
-                    Label("Repair or upgrade", systemImage: "screwdriver")
-                }
-            }
-            
-            Section {
-                Button {
-                    if #available(iOS 26, *) {
-                        openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
-                    } else {
-                        openURL(URL(string: "https://frame.work/")!)
+            Form {
+                Section {
+                    NavigationLink {
+                        Text("aaaaghh")
+                    } label: {
+                        Label("New build", systemImage: "truck.box")
                     }
-                } label: {
-                    Label("Buy parts", systemImage: "cart")
+                }
+                
+                Section {
+                    NavigationLink {
+                        Text("more aaahhh")
+                    } label: {
+                        Label("Repair or upgrade", systemImage: "screwdriver")
+                    }
+                }
+                
+                Section {
+                    Button {
+                        if #available(iOS 26, *) {
+                            openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
+                        } else {
+                            openURL(URL(string: "https://frame.work/")!)
+                        }
+                    } label: {
+                        Label("Buy parts", systemImage: "cart")
+                    }
                 }
             }
         }
-        .navigationTitle("Framework 16")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

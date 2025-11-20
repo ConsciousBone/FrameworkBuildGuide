@@ -16,7 +16,8 @@ struct FW12MenuView: View {
                 title: "Framework 12",
                 image: "FW12-Header"
             )
-                .frame(maxHeight: UIScreen.main.bounds.height / 4) // 1/4 of screen
+            .frame(maxHeight: UIScreen.main.bounds.height / 4) // 1/4 of screen
+            
             Form {
                 Section {
                     NavigationLink {
