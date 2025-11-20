@@ -12,7 +12,10 @@ struct FW12MenuView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            MenuHeaderView(viewIndex: 1)
+            MenuHeaderView(
+                title: "Framework 12",
+                image: "FW12-Header"
+            )
                 .frame(maxHeight: UIScreen.main.bounds.height / 4) // 1/4 of screen
             Form {
                 Section {
@@ -44,8 +47,6 @@ struct FW12MenuView: View {
                 }
             }
         }
-        .navigationTitle("Framework 12")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

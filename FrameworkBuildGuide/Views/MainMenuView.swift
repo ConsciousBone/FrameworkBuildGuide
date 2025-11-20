@@ -14,7 +14,10 @@ struct MainMenuView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                MenuHeaderView(viewIndex: 0)
+                MenuHeaderView(
+                    title: "Framework Build Guide",
+                    image: "FW-Header"
+                )
                     .frame(maxHeight: UIScreen.main.bounds.height / 4) // 1/4 of screen
                 ScrollView {
                     Text("Select your model:")
@@ -107,9 +110,6 @@ struct MainMenuView: View {
                 }
                 .background(Color(.systemGroupedBackground))
             }
-            .navigationTitle("Main menu")
-            // hide title, still shows when user holds back button tho
-            .toolbar(.hidden)
         }
     }
 }

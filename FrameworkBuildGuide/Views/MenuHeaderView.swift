@@ -8,41 +8,30 @@
 import SwiftUI
 
 struct MenuHeaderView: View {
-    let viewIndex: Int
-    // 0 -> mainmenuview
-    // 1 -> fw12menuview
-    // 2 -> fw13menuview
-    // 3 -> fw16menuview
-    // 4 -> modelfindview eventually
+    let title: String
+    let image: String
     
     var body: some View {
-        if viewIndex == 0 {
-            ZStack {
-                Image("FW-Header")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                Text("Framework Build Guide")
-                    .font(.title2.monospaced())
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.regularMaterial)
-                    )
-                    .shadow(radius: 2)
-            }
-        } else if viewIndex == 1 {
-            ZStack {
-                Color.red
-                    .ignoresSafeArea()
-                Text("FW12 header view")
-                    .foregroundStyle(.white)
-                    .font(.title)
-            }
+        ZStack {
+            Image(image)
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            Text(title)
+                .font(.title2.monospaced())
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundStyle(.regularMaterial)
+                )
+                .shadow(radius: 2)
         }
     }
 }
 
 #Preview {
-    MenuHeaderView(viewIndex: 0)
+    MenuHeaderView(
+        title: "Example title",
+        image: "FW-Header"
+    )
 }
