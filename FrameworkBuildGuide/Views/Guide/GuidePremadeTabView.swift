@@ -10,27 +10,39 @@ import SwiftUI
 struct GuidePremadeTabView: View {
     let stepNumber: Int
     let stepDescription: String
-    let imageURL: String
+    let imageURLs: [String]
     let bodyText: String
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                Text("Step \(stepNumber)")
-                    .font(.title.bold())
-                Text(stepDescription)
-                    .font(.title2)
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Step \(stepNumber)")
+                        .font(.title.bold())
+                    Text(stepDescription)
+                        .font(.title2)
+                }
+                Spacer()
             }
             .padding()
             
             VStack {
-                GuideImageView(imageURL: imageURL)
-                    .padding()
+                TabView {
+                    ForEach(imageURLs.indices, id: \.self) { index in
+                        GuideImageView(imageURL: imageURLs[index])
+                            .padding()
+                            .tag(index)
+                    }
+                }
+                .frame(height: 280)
+                .tabViewStyle(.page)
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
                 
                 Text(bodyText)
                     .padding()
             }
         }
+        .padding()
     }
 }
 
@@ -38,7 +50,7 @@ struct GuidePremadeTabView: View {
     GuidePremadeTabView(
         stepNumber: 1,
         stepDescription: "Unbox your Framework Laptop",
-        imageURL: "https://d3t0tbmlie281e.cloudfront.net/igi/framework/PVjQDIRMMTGZqnMr.medium",
+        imageURLs: ["https://d3t0tbmlie281e.cloudfront.net/igi/framework/PVjQDIRMMTGZqnMr.medium"],
         bodyText: """
             Unbox your Framework Laptop and make sure you've received the following items:
             - Input Cover of your choice
