@@ -12,17 +12,23 @@ struct FW12NewBuildView: View {
     
     var body: some View {
         TabView(selection: $currentTab) {
-            VStack {
-                Text("a")
-                GuideImageView(
-                    imageURL: "https://d3t0tbmlie281e.cloudfront.net/igi/framework/PVjQDIRMMTGZqnMr.huge"
-                )
-                Button("next") {
-                    withAnimation {
-                        currentTab += 1
-                    }
-                }
-            }
+            GuidePremadeTabView(
+                stepNumber: 1,
+                stepDescription: "Unbox your Framework Laptop",
+                imageURL: "https://d3t0tbmlie281e.cloudfront.net/igi/framework/PVjQDIRMMTGZqnMr.medium",
+                bodyText: """
+                    Unbox your Framework Laptop and make sure you've received the following items:
+                    - Input Cover of your choice
+                    - Framework Screwdriver
+                    
+                    Additionally, make sure you've received the optional items you purchased with your Framework Laptop:
+                    - Storage / SSD
+                    - Memory module / RAM
+                    - Expansion Card(s)
+                    - Framework Power Adapter, USB-C Cable, and AC Cable
+                    """
+            )
+            .padding()
             .tag(0)
             
             VStack {
