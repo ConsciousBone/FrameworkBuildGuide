@@ -1,0 +1,36 @@
+{
+  "fill" : {
+    "automatic-gradient" : "srgb:0.27088,0.71772,0.34510,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "Untitled_Artwork-1.png",
+          "name" : "Untitled_Artwork-1",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              12.1171875,
+              2.921875
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
