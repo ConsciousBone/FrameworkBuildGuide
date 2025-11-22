@@ -29,7 +29,7 @@ struct FW12MenuView: View {
                 
                 Section {
                     NavigationLink {
-                        Text("aaaaa more something")
+                        FW12RepairUpgradeView()
                     } label: {
                         Label("Repair or upgrade", systemImage: "screwdriver")
                     }
