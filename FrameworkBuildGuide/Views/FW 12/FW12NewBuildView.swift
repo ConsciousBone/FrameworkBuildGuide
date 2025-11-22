@@ -333,6 +333,8 @@ struct FW12NewBuildView: View {
             )
             .tag(17)
         }
+        .navigationTitle("New build")
+        .navigationBarTitleDisplayMode(.inline)
         .background(Color(.systemGroupedBackground))
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always)) // give dots a bg
