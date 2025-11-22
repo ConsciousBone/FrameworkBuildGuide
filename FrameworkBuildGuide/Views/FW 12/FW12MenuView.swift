@@ -21,7 +21,7 @@ struct FW12MenuView: View {
             Form {
                 Section {
                     NavigationLink {
-                        Text("something something")
+                        FW12NewBuildView()
                     } label: {
                         Label("New build", systemImage: "truck.box")
                     }

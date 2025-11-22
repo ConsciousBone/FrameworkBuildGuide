@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainMenuView: View {
-    //TODO: replace the systemimages with actual images of the laptop also decorate the view more somehow
     let gridColumns = Array(repeating: GridItem(.flexible()), count: 2)
     
     var body: some View {
@@ -37,7 +36,6 @@ struct MainMenuView: View {
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
                         .buttonStyle(.plain)
@@ -56,7 +54,6 @@ struct MainMenuView: View {
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
                         .buttonStyle(.plain)
@@ -75,7 +72,6 @@ struct MainMenuView: View {
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
                         .buttonStyle(.plain)
@@ -100,7 +96,6 @@ struct MainMenuView: View {
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color(.systemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 24))
                         }
                         .buttonStyle(.plain)
