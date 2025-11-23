@@ -49,13 +49,13 @@ struct FW12MenuView: View {
                 Section {
                     Button {
                         if #available(iOS 26, *) {
-                            openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
+                            openURL(URL(string: "https://frame.work/gb/en/marketplace?compatibility%5B%5D=laptop_12_13th_gen_intel_core")!, prefersInApp: true)
                         } else {
-                            openURL(URL(string: "https://frame.work/")!)
+                            openURL(URL(string: "https://frame.work/gb/en/marketplace?compatibility%5B%5D=laptop_12_13th_gen_intel_core")!)
                         }
                     } label: {
                         Label("Buy parts", systemImage: "cart")
-                    } // cant grab the actual url rn cause i have no internet ;-;
+                    }
                 }
             }
         }

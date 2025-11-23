@@ -21,7 +21,10 @@ struct FW16MenuView: View {
             Form {
                 Section {
                     NavigationLink {
-                        Text("aaaaghh")
+                        ContentUnavailableView(
+                            "Coming soon",
+                            systemImage: "hourglass"
+                        )
                     } label: {
                         Label("New build", systemImage: "truck.box")
                     }
@@ -29,7 +32,10 @@ struct FW16MenuView: View {
                 
                 Section {
                     NavigationLink {
-                        Text("more aaahhh")
+                        ContentUnavailableView(
+                            "Coming soon",
+                            systemImage: "hourglass"
+                        )
                     } label: {
                         Label("Repair or upgrade", systemImage: "screwdriver")
                     }
@@ -38,9 +44,9 @@ struct FW16MenuView: View {
                 Section {
                     Button {
                         if #available(iOS 26, *) {
-                            openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
+                            openURL(URL(string: "https://frame.work/gb/en/marketplace?compatibility%5B%5D=laptop_16&compatibility%5B%5D=laptop_16_amd_ryzen_ai300_series")!, prefersInApp: true)
                         } else {
-                            openURL(URL(string: "https://frame.work/")!)
+                            openURL(URL(string: "https://frame.work/gb/en/marketplace?compatibility%5B%5D=laptop_16&compatibility%5B%5D=laptop_16_amd_ryzen_ai300_series")!)
                         }
                     } label: {
                         Label("Buy parts", systemImage: "cart")

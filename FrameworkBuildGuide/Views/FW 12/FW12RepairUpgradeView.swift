@@ -10,15 +10,19 @@ import SwiftUI
 struct FW12RepairUpgradeView: View {
     @Environment(\.openURL) private var openURL
     
+    func goToURL(url: String) {
+        if #available(iOS 26, *) {
+            openURL(URL(string: url)!, prefersInApp: true)
+        } else {
+            openURL(URL(string: url)!)
+        }
+    }
+    
     var body: some View {
         Form {
             Section {
                 Button {
-                    if #available(iOS 26, *) {
-                        openURL(URL(string: "https://guides.frame.work/Guide/Antenna+Module/423?lang=en")!, prefersInApp: true)
-                    } else {
-                        openURL(URL(string: "https://guides.frame.work/Guide/Antenna+Module/423?lang=en")!)
-                    }
+                    goToURL(url: "https://guides.frame.work/Guide/Antenna+Module/423?lang=en")
                 } label: {
                     Label("Antenna module", systemImage: "antenna.radiowaves.left.and.right")
                 }
@@ -34,11 +38,7 @@ struct FW12RepairUpgradeView: View {
                 }
             } footer: {
                 Button {
-                    if #available(iOS 26, *) {
-                        openURL(URL(string: "https://guides.frame.work/Guide/Audio+Board/424?lang=en")!, prefersInApp: true)
-                    } else {
-                        openURL(URL(string: "https://guides.frame.work/Guide/Audio+Board/424?lang=en")!)
-                    }
+                    goToURL(url: "https://guides.frame.work/Guide/Audio+Board/424?lang=en")
                 } label: {
                     Text("Open original guide")
                         .font(.footnote)
@@ -54,16 +54,16 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                NavigationLink {
-                    Text("Coming soon")
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Bottom+Cover/426?lang=en")
                 } label: {
                     Label("Bottom cover", systemImage: "rectangle.fill")
                 }
             }
             
             Section {
-                NavigationLink {
-                    Text("Coming soon")
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Display/428?lang=en")
                 } label: {
                     Label("Display", systemImage: "display")
                 }
@@ -78,8 +78,8 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                NavigationLink {
-                    Text("Coming soon")
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Hinges/434?lang=en")
                 } label: {
                     Label("Hinges", systemImage: "door.left.hand.open")
                 }
@@ -94,8 +94,8 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                NavigationLink {
-                    Text("Coming soon")
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Mainboard/436?lang=en")
                 } label: {
                     Label("Mainboard", systemImage: "cpu")
                 }
@@ -158,8 +158,8 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                NavigationLink {
-                    Text("Coming soon")
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Top+Cover/446?lang=en")
                 } label: {
                     Label("Top cover", systemImage: "rectangle.fill")
                 }
@@ -174,10 +174,18 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                NavigationLink {
-                    Text("Coming soon")
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Webcam/449?lang=en")
                 } label: {
                     Label("Webcam", systemImage: "web.camera")
+                }
+            }
+            
+            Section {
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Webcam+Cable/448?lang=en")
+                } label: {
+                    Label("Webcam cable", systemImage: "cable.coaxial")
                 }
             }
             
@@ -190,8 +198,8 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                NavigationLink {
-                    Text("Coming soon")
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/eDP+Cable/430?lang=en")
                 } label: {
                     Label("eDP cable", systemImage: "cable.coaxial")
                 }

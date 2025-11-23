@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FMMMenuView: View {
     var body: some View {
-        Text("Find my model view")
+        ContentUnavailableView(
+            "Coming soon",
+            systemImage: "hourglass"
+        )
     }
 }
 

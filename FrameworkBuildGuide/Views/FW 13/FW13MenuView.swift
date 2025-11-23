@@ -21,7 +21,10 @@ struct FW13MenuView: View {
             Form {
                 Section {
                     NavigationLink {
-                        Text("something something")
+                        ContentUnavailableView(
+                            "Coming soon",
+                            systemImage: "hourglass"
+                        )
                     } label: {
                         Label("New build", systemImage: "truck.box")
                     }
@@ -29,7 +32,10 @@ struct FW13MenuView: View {
                 
                 Section {
                     NavigationLink {
-                        Text("aaaaa more something")
+                        ContentUnavailableView(
+                            "Coming soon",
+                            systemImage: "hourglass"
+                        )
                     } label: {
                         Label("Repair or upgrade", systemImage: "screwdriver")
                     }
@@ -38,13 +44,13 @@ struct FW13MenuView: View {
                 Section {
                     Button {
                         if #available(iOS 26, *) {
-                            openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
+                            openURL(URL(string: "https://frame.work/gb/en/marketplace?compatibility%5B%5D=11th_gen_intel_core&compatibility%5B%5D=12th_gen_intel_core&compatibility%5B%5D=chromebook&compatibility%5B%5D=13th_gen_intel_core&compatibility%5B%5D=amd_ryzen_7040_series&compatibility%5B%5D=ultra_series_1_intel_core&compatibility%5B%5D=amd_ryzen_ai300_series")!, prefersInApp: true)
                         } else {
-                            openURL(URL(string: "https://frame.work/")!)
+                            openURL(URL(string: "https://frame.work/gb/en/marketplace?compatibility%5B%5D=11th_gen_intel_core&compatibility%5B%5D=12th_gen_intel_core&compatibility%5B%5D=chromebook&compatibility%5B%5D=13th_gen_intel_core&compatibility%5B%5D=amd_ryzen_7040_series&compatibility%5B%5D=ultra_series_1_intel_core&compatibility%5B%5D=amd_ryzen_ai300_series")!)
                         }
                     } label: {
                         Label("Buy parts", systemImage: "cart")
-                    } // cant grab the actual url rn cause i have no internet ;-;
+                    }
                 }
             }
         }
