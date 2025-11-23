@@ -13,10 +13,35 @@ struct FW12RepairUpgradeView: View {
     var body: some View {
         Form {
             Section {
+                Button {
+                    if #available(iOS 26, *) {
+                        openURL(URL(string: "https://guides.frame.work/Guide/Antenna+Module/423?lang=en")!, prefersInApp: true)
+                    } else {
+                        openURL(URL(string: "https://guides.frame.work/Guide/Antenna+Module/423?lang=en")!)
+                    }
+                } label: {
+                    Label("Antenna module", systemImage: "antenna.radiowaves.left.and.right")
+                }
+            } footer: {
+                Text("Opens in a web browser")
+            }
+            
+            Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12RepairAudioBoardView()
                 } label: {
                     Label("Audio board", systemImage: "speaker.fill")
+                }
+            } footer: {
+                Button {
+                    if #available(iOS 26, *) {
+                        openURL(URL(string: "https://guides.frame.work/Guide/Audio+Board/424?lang=en")!, prefersInApp: true)
+                    } else {
+                        openURL(URL(string: "https://guides.frame.work/Guide/Audio+Board/424?lang=en")!)
+                    }
+                } label: {
+                    Text("Open original guide")
+                        .font(.footnote)
                 }
             }
             
