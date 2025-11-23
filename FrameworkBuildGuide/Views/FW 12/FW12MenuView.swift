@@ -26,7 +26,16 @@ struct FW12MenuView: View {
                         Label("New build", systemImage: "truck.box")
                     }
                 } footer: {
-                    Text("Original guide at [guides.frame.work](https://guides.frame.work/Guide/Framework+Laptop+12+(13th+Gen+Intel®+Core™)+DIY+Edition+Quick+Start+Guide/429#s2423)")
+                    Button {
+                        if #available(iOS 26, *) {
+                            openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
+                        } else {
+                            openURL(URL(string: "https://frame.work/")!)
+                        }
+                    } label: {
+                        Text("Open original guide")
+                            .font(.footnote)
+                    }
                 }
                 
                 Section {
