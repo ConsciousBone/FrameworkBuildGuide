@@ -21,13 +21,20 @@ struct FW12RepairUpgradeView: View {
     var body: some View {
         Form {
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Antenna+Module/423?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Antenna+Module/423?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Antenna module", systemImage: "antenna.radiowaves.left.and.right")
                 }
-            } footer: {
-                Text("Opens in a web browser")
             }
             
             Section {
@@ -54,16 +61,34 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Bottom+Cover/426?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Bottom+Cover/426?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Bottom cover", systemImage: "rectangle.fill")
                 }
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Display/428?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Display/428?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Display", systemImage: "display")
                 }
@@ -78,8 +103,17 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Hinges/434?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Hinges/434?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Hinges", systemImage: "door.left.hand.open")
                 }
@@ -94,8 +128,17 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Mainboard/436?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Mainboard/436?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Mainboard", systemImage: "cpu")
                 }
@@ -158,8 +201,17 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Top+Cover/446?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Top+Cover/446?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Top cover", systemImage: "rectangle.fill")
                 }
@@ -174,16 +226,34 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Webcam/449?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Webcam/449?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Webcam", systemImage: "web.camera")
                 }
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/Webcam+Cable/448?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Webcam+Cable/448?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Webcam cable", systemImage: "cable.coaxial")
                 }
@@ -198,8 +268,17 @@ struct FW12RepairUpgradeView: View {
             }
             
             Section {
-                Button {
-                    goToURL(url: "https://guides.frame.work/Guide/eDP+Cable/430?lang=en")
+                NavigationLink {
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/eDP+Cable/430?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("eDP cable", systemImage: "cable.coaxial")
                 }

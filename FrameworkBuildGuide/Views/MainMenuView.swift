@@ -78,7 +78,7 @@ struct MainMenuView: View {
                         .padding()
                         
                         NavigationLink {
-                            Text("not a clue m8")
+                            FMMMenuView()
                         } label: {
                             VStack {
                                 RoundedRectangle(cornerRadius: 20)

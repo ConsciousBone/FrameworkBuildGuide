@@ -10,6 +10,14 @@ import SwiftUI
 struct FW16MenuView: View {
     @Environment(\.openURL) private var openURL
     
+    func goToURL(url: String) {
+        if #available(iOS 26, *) {
+            openURL(URL(string: url)!, prefersInApp: true)
+        } else {
+            openURL(URL(string: url)!)
+        }
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             MenuHeaderView(
@@ -21,10 +29,16 @@ struct FW16MenuView: View {
             Form {
                 Section {
                     NavigationLink {
-                        ContentUnavailableView(
-                            "Coming soon",
-                            systemImage: "hourglass"
-                        )
+                        ContentUnavailableView {
+                            Label("Coming soon...", systemImage: "hourglass")
+                        } description: {
+                            Text("This guide is available online and will be ported to this app soon!")
+                        } actions: {
+                            Button("Open guide online") {
+                                goToURL(url: "https://guides.frame.work/Guide/Framework+Laptop+16+DIY+Edition+Quick+Start+Guide/270")
+                            }
+                            .buttonStyle(.borderedProminent)
+                        }
                     } label: {
                         Label("New build", systemImage: "truck.box")
                     }
@@ -32,10 +46,16 @@ struct FW16MenuView: View {
                 
                 Section {
                     NavigationLink {
-                        ContentUnavailableView(
-                            "Coming soon",
-                            systemImage: "hourglass"
-                        )
+                        ContentUnavailableView {
+                            Label("Coming soon...", systemImage: "hourglass")
+                        } description: {
+                            Text("These guides are available online and will be ported to this app soon!")
+                        } actions: {
+                            Button("Open guides online") {
+                                goToURL(url: "https://guides.frame.work/c/Framework_Laptop_16")
+                            }
+                            .buttonStyle(.borderedProminent)
+                        }
                     } label: {
                         Label("Repair or upgrade", systemImage: "screwdriver")
                     }
