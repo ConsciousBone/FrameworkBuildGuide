@@ -31,12 +31,82 @@ struct FW12AntennaRepairView: View {
                     """
             )
             .tag(0)
+            
+            GuidePremadeTabView(
+                stepNumber: 2,
+                stepDescription: "Set your laptop down",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/oaiEhiRMbsK2W6xu.medium"
+                ],
+                bodyText: """
+                    Set your Framework Laptop face-down on a clean work surface.
+                    """
+            )
+            .tag(1)
+            
+            GuidePremadeTabView(
+                stepNumber: 3,
+                stepDescription: "Remove the Expansion Cards",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ok3GhiRMTaCJvXnB.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/otYIhiRMIUGZqnMr.large"
+                ],
+                bodyText: """
+                    Use your fingers to flip the two Expansion Card latches (one for each side) into the unlocked position.
+                    
+                    The latches display a red bar when they're unlocked.
+                    """
+            )
+            .tag(2)
+            
+            GuidePremadeTabView(
+                stepNumber: 4,
+                stepDescription: "Remove the Expansion Cards",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/oSUFhiRMaRK2W6xu.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/phkOhiRMQQGZqnMr.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/pn6ZhiRMPICJvXnB.large"
+                ],
+                bodyText: """
+                    Grip the lip of an Expansion Card with your fingers.
+                    
+                    Pull the Expansion Card out of its slot and remove it.
+                    
+                    If you have trouble pulling the Expansion Card out, you can also use the flat end of your Framework Screwdriver to push against the lip.
+                    
+                    Repeat this procedure to remove all remaining Expansion Cards.
+                    """
+            )
+            .tag(3)
         }
         .navigationTitle("Antenna module")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color(.systemGroupedBackground))
-        .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .always)) // give dots a bg
+        .tabViewStyle(.page(indexDisplayMode: .never)) // remove dots
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                HStack {
+                    Button {
+                        currentTab -= 1
+                    } label: {
+                        Label("Back", systemImage: "chevron.backward")
+                    }
+                    .disabled(currentTab <= 0)
+                    
+                    Spacer()
+                    
+                    Text("Step \(currentTab + 1) of 14")
+                    
+                    Spacer()
+                    
+                    Button {
+                        currentTab += 1
+                    } label: {
+                        Label("Next", systemImage: "chevron.forward")
+                    }
+                }
+            }
+        }
     }
 }
 

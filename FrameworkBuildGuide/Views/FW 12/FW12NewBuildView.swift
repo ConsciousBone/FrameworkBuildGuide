@@ -336,8 +336,36 @@ struct FW12NewBuildView: View {
         .navigationTitle("New build")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color(.systemGroupedBackground))
-        .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .always)) // give dots a bg
+        .tabViewStyle(.page(indexDisplayMode: .never)) // remove dots
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                HStack {
+                    Button {
+                        withAnimation {
+                            currentTab -= 1
+                        }
+                    } label: {
+                        Label("Back", systemImage: "chevron.backward")
+                    }
+                    .disabled(currentTab <= 0)
+                    
+                    Spacer()
+                    
+                    Text("Step \(currentTab + 1) of 18")
+                    
+                    Spacer()
+                    
+                    Button {
+                        withAnimation {
+                            currentTab += 1
+                        }
+                    } label: {
+                        Label("Next", systemImage: "chevron.forward")
+                    }
+                    .disabled(currentTab >= 17)
+                }
+            }
+        }
     }
 }
 
