@@ -12,7 +12,7 @@ struct FW12RepairUpgradeView: View {
         Form {
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12AntennaRepairView()
                 } label: {
                     Label("Antenna module", systemImage: "antenna.radiowaves.left.and.right")
                 }
