@@ -25,6 +25,8 @@ struct FW12MenuView: View {
                     } label: {
                         Label("New build", systemImage: "truck.box")
                     }
+                } footer: {
+                    Text("Original guide at [guides.frame.work](https://guides.frame.work/Guide/Framework+Laptop+12+(13th+Gen+Intel®+Core™)+DIY+Edition+Quick+Start+Guide/429#s2423)")
                 }
                 
                 Section {
