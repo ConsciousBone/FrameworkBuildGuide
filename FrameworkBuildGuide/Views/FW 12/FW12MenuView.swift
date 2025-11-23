@@ -28,9 +28,9 @@ struct FW12MenuView: View {
                 } footer: {
                     Button {
                         if #available(iOS 26, *) {
-                            openURL(URL(string: "https://frame.work/")!, prefersInApp: true)
+                            openURL(URL(string: "https://guides.frame.work/Guide/Framework+Laptop+12+(13th+Gen+Intel®+Core™)+DIY+Edition+Quick+Start+Guide/429#s2423")!, prefersInApp: true)
                         } else {
-                            openURL(URL(string: "https://frame.work/")!)
+                            openURL(URL(string: "https://guides.frame.work/Guide/Framework+Laptop+12+(13th+Gen+Intel®+Core™)+DIY+Edition+Quick+Start+Guide/429#s2423")!)
                         }
                     } label: {
                         Text("Open original guide")
