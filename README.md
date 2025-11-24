@@ -9,3 +9,5 @@ This is a work in progress, and many sections just have links to the actual FW b
     - Display cover
     - Input cover
     - Memory
+    - Stylus battery
+    - Stylus tips

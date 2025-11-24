@@ -229,9 +229,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12RepairStylusTipView()
                 } label: {
                     Label("Stylus tip", systemImage: "pencil")
+                }
+            } footer: {
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Stylus+Tip/445?lang=en")
+                } label: {
+                    Text("Open original guide")
+                        .font(.footnote)
                 }
             }
             
