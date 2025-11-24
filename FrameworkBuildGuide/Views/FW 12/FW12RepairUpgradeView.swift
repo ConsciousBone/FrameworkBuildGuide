@@ -54,7 +54,7 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12RepairBatteryView()
                 } label: {
                     Label("Battery", systemImage: "battery.100")
                 }

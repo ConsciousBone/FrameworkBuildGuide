@@ -157,6 +157,111 @@ struct FW12RepairBatteryView: View {
                     """
             )
             .tag(9)
+            
+            GuidePremadeTabView(
+                stepNumber: 11,
+                stepDescription: "Install the battery",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/kAelDZRMTpCxoQUU.large"
+                ],
+                bodyText: """
+                    Lay the battery in its recess in the laptop.
+                    """
+            )
+            .tag(10)
+            
+            GuidePremadeTabView(
+                stepNumber: 12,
+                stepDescription: "Install the battery",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/tgmNDZRMsLK2W6xu.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/tjyaDZRMRrCxoQUU.large"
+                ],
+                bodyText: """
+                    Use your finger to push the battery down near its connector to reconnect it.
+                    """
+            )
+            .tag(11)
+            
+            GuidePremadeTabView(
+                stepNumber: 13,
+                stepDescription: "Install the battery",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ICMvDZRMbFCxoQUU.large"
+                ],
+                bodyText: """
+                    Use your Framework Screwdriver to tighten the six captive T5 Torx screws to secure the battery.
+                    
+                    Tighten the screws until they're snug. Don't over-tighten them, or you may strip the screws.
+                    """
+            )
+            .tag(12)
+            
+            GuidePremadeTabView(
+                stepNumber: 13,
+                stepDescription: "Install the Input Cover",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/qeghD2RMExCxoQUU.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/qmQhD2RMIeGZqnMr.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/q3h1D2RMNPK2W6xu.large"
+                ],
+                bodyText: """
+                    Angle the bottom edge of the Input Cover towards the base of the laptop.
+                    
+                    Align and insert the bottom edge of the Input Cover into the base of the laptop.
+                    
+                    Make sure the slots along the bottom edge of the Input Cover slide into the tabs in the base.
+                    
+                    Lower the Input Cover's top edge onto the laptop until the magnets snap it in place.
+                    
+                    Make sure the Input Cover sits neatly within the laptop frame and no corners are popping up.
+                    """
+            )
+            .tag(12)
+            
+            GuidePremadeTabView(
+                stepNumber: 14,
+                stepDescription: "Close and flip your laptop",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ZAQUD3RMtXCJvXnB.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ZGUjD3RMJyK2W6xu.large"
+                ],
+                bodyText: """
+                    Close the laptop lid.
+                    
+                    Flip your laptop face-down on a clean work surface.
+                    """
+            )
+            .tag(13)
+            
+            GuidePremadeTabView(
+                stepNumber: 15,
+                stepDescription: "Tighten the bottom screws",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/wETZD2RMiJCJvXnB.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/JVBXD2RMUTGZqnMr.large"
+                ],
+                bodyText: """
+                    Use your Framework Screwdriver to tighten the eight captive T5 Torx screws on the bottom of your laptop.
+                    
+                    Tighten the screws until they're snug. Don't over-tighten them, or you may strip the screws.
+                    """
+            )
+            .tag(14)
+            
+            GuidePremadeTabView(
+                stepNumber: 16,
+                stepDescription: "Plug in your laptop",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/DYpyD3RMrNK2W6xu.large"
+                ],
+                bodyText: """
+                    The battery ships in shipping mode, so the laptop won't power on until you plug it in first.
+                    
+                    Plug a power supply into any USB-C port on your laptop.
+                    """
+            )
+            .tag(15)
         }
         .navigationTitle("Battery")
         .navigationBarTitleDisplayMode(.inline)
@@ -176,7 +281,7 @@ struct FW12RepairBatteryView: View {
                     
                     Spacer()
                     
-                    Text("Step \(currentTab + 1) of 15")
+                    Text("Step \(currentTab + 1) of 16")
                     
                     Spacer()
                     
