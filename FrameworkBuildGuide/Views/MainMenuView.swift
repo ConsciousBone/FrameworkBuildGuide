@@ -32,7 +32,7 @@ struct MainMenuView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(maxWidth: 200)
                                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                                Text("Framework 12")
+                                Text("Laptop 12")
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -50,7 +50,7 @@ struct MainMenuView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(maxWidth: 200)
                                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                                Text("Framework 13")
+                                Text("Laptop 13")
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -68,7 +68,7 @@ struct MainMenuView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(maxWidth: 200)
                                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                                Text("Framework 16")
+                                Text("Laptop 16")
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
