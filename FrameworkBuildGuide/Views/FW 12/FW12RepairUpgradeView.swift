@@ -214,9 +214,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12RepairStylusBatteryView()
                 } label: {
                     Label("Stylus battery", systemImage: "battery.100")
+                }
+            } footer: {
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Stylus+Battery+Module/444?lang=en")
+                } label: {
+                    Text("Open original guide")
+                        .font(.footnote)
                 }
             }
             
