@@ -182,7 +182,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Power+Button+Board/438?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Power button board", systemImage: "power.circle")
                 }
@@ -190,7 +199,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/SSD+Clip/442?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("SSD clip", systemImage: "paperclip")
                 }
@@ -198,7 +216,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Speakers/441?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Speakers", systemImage: "speaker.wave.3.fill")
                 }
@@ -206,7 +233,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Storage-+SSD/443?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("SSD", systemImage: "internaldrive")
                 }
@@ -261,7 +297,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Touchpad/447?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Touchpad", systemImage: "rectangle.and.hand.point.up.left.filled")
                 }
@@ -303,7 +348,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    ContentUnavailableView {
+                        Label("Coming soon...", systemImage: "hourglass")
+                    } description: {
+                        Text("This guide is available online and will be ported to this app soon!")
+                    } actions: {
+                        Button("Open guide online") {
+                            goToURL(url: "https://guides.frame.work/Guide/Wi-Fi+Module/450?lang=en")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 } label: {
                     Label("Wi-Fi module", systemImage: "wifi")
                 }

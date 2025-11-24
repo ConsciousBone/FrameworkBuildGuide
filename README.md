@@ -10,4 +10,4 @@ This is a work in progress, and many sections just have links to the actual FW b
     - Input cover
     - Memory
     - Stylus battery
-    - Stylus tips
+    - Stylus tip

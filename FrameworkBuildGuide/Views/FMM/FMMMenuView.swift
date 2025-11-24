@@ -9,10 +9,11 @@ import SwiftUI
 
 struct FMMMenuView: View {
     var body: some View {
-        ContentUnavailableView(
-            "Coming soon",
-            systemImage: "hourglass"
-        )
+        ContentUnavailableView {
+            Label("Coming soon...", systemImage: "hourglass")
+        } description: {
+            Text("This feature is not yet available and will be added soon!")
+        }
     }
 }
 
