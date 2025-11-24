@@ -19,7 +19,7 @@ todo: put them here
 [yt link](https://example.com/)
 
 # Credits
-- Framework's own hardware guides, ones I used are linked in the app!
+- Framework's own hardware guides, ones I used are linked in the app as footers of the buttons for the guides!
 - Images all from various [Framework](https://frame.work/) pages.
 
 # How to get FrameworkBuildGuide
