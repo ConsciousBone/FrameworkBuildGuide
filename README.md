@@ -17,7 +17,7 @@ It supports both iOS and iPadOS, as well as Mac and Apple Vision Pro using *Desi
 <img src="/Screenshots/1.png" width=128> <img src="/Screenshots/2.png" width=128>
 <img src="/Screenshots/3.png" width=128> <img src="/Screenshots/4.png" width=128>
 ## Video
-[yt link](https://example.com/)
+[YouTube link (unlisted, also a short for some reason?)](https://youtube.com/shorts/Ho-FYN187_U)
 
 # Credits
 - Framework's own hardware guides, ones I used are linked in the app as footers of the buttons for the guides!
