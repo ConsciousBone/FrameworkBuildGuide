@@ -14,7 +14,8 @@ It supports both iOS and iPadOS, as well as Mac and Apple Vision Pro using *Desi
 
 # Demos
 ## Screenshots
-todo: put them here
+<img src="/Screenshots/1.png" width=128> <img src="/Screenshots/2.png" width=128>
+<img src="/Screenshots/3.png" width=128> <img src="/Screenshots/4.png" width=128>
 ## Video
 [yt link](https://example.com/)
 
