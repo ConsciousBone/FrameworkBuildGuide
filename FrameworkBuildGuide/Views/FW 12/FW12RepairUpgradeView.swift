@@ -58,6 +58,13 @@ struct FW12RepairUpgradeView: View {
                 } label: {
                     Label("Battery", systemImage: "battery.100")
                 }
+            } footer: {
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Battery/425?lang=en")
+                } label: {
+                    Text("Open original guide")
+                        .font(.footnote)
+                }
             }
             
             Section {
@@ -96,9 +103,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12RepairDisplayCoverView()
                 } label: {
                     Label("Display cover", systemImage: "rectangle")
+                }
+            } footer: {
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Display+Cover/427?lang=en")
+                } label: {
+                    Text("Open original guide")
+                        .font(.footnote)
                 }
             }
             

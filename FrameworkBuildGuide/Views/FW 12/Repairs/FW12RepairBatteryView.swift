@@ -292,7 +292,7 @@ struct FW12RepairBatteryView: View {
                     } label: {
                         Label("Next", systemImage: "chevron.forward")
                     }
-                    .disabled(currentTab >= 14)
+                    .disabled(currentTab >= 15)
                 }
             }
         }
