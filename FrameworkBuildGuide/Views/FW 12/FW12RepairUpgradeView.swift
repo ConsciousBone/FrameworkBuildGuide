@@ -167,9 +167,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12RepairMemoryView()
                 } label: {
                     Label("Memory", systemImage: "memorychip")
+                }
+            } footer: {
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Memory/437?lang=en")
+                } label: {
+                    Text("Open original guide")
+                        .font(.footnote)
                 }
             }
             
