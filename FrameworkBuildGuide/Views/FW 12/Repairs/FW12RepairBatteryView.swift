@@ -1,13 +1,13 @@
 //
-//  FW12RepairAudioBoardView.swift
+//  FW12RepairBatteryView.swift
 //  FrameworkBuildGuide
 //
-//  Created by Evan Plant on 23/11/2025.
+//  Created by Evan Plant on 24/11/2025.
 //
 
 import SwiftUI
 
-struct FW12RepairAudioBoardView: View {
+struct FW12RepairBatteryView: View {
     @State private var currentTab = 0
     
     var body: some View {
@@ -108,33 +108,46 @@ struct FW12RepairAudioBoardView: View {
             
             GuidePremadeTabView(
                 stepNumber: 7,
-                stepDescription: "Loosen the Audio Board screw",
+                stepDescription: "Loosen the battery screws",
                 imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/jWeL4MRMeKK2W6xu.large"
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/eFejDWRMJXCJvXnB.large"
                 ],
                 bodyText: """
-                    Use your Framework Screwdriver to loosen the captive T5 Torx screw securing the Audio Board along the left edge of the laptop.
+                    Use your Framework Screwdriver to loosen the six captive T5 Torx screws securing the battery.
                     """
             )
             .tag(6)
             
             GuidePremadeTabView(
                 stepNumber: 8,
-                stepDescription: "Remove the Audio Board",
+                stepDescription: "Disconnect the battery",
                 imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/tUy44MRMBOCxoQUU.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/tMBB4MRMxBCJvXnB.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/tMev4MRMcGGZqnMr.large"
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/eGbQDWRMlWGZqnMr.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ev3ZDWRMSwK2W6xu.large"
                 ],
                 bodyText: """
-                    Use your fingers to lift the right edge of the Audio Board and pull it out of its recess.
-                    Remove the Audio Board.
+                    Grab the orange battery tab with your fingers and lift straight up to disconnect the battery.
+                    
+                    The battery connector can be tight, requiring some force. If it feels like part of the battery won't come up, check that the battery screws are fully loosened.
                     """
             )
             .tag(7)
             
             GuidePremadeTabView(
                 stepNumber: 9,
+                stepDescription: "Remove the battery",
+                imageURLs: [
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ee1wDWRMYjCxoQUU.large",
+                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/g6tCDWRMShCJvXnB.large"
+                ],
+                bodyText: """
+                    Lift and remove the battery from the laptop.
+                    """
+            )
+            .tag(8)
+            
+            GuidePremadeTabView(
+                stepNumber: 10,
                 stepDescription: "Disassembly complete",
                 imageURLs: [
                     "https://d3t0tbmlie281e.cloudfront.net/igi/framework/XU3GDYRMKmK2W6xu.large"
@@ -143,105 +156,9 @@ struct FW12RepairAudioBoardView: View {
                     Congratulations on completing disassembly! The remaining steps will show how to reassemble your Framework Laptop.
                     """
             )
-            .tag(8)
-            
-            GuidePremadeTabView(
-                stepNumber: 10,
-                stepDescription: "Install the Audio Board",
-                imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/xZBK4MRMl4K2W6xu.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/yRRb4MRMOeGZqnMr.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/xQNY4MRMmFCxoQUU.large"
-                ],
-                bodyText: """
-                    Insert the Audio Board into the laptop at an angle to help align the headphone jack.
-                    
-                    Use the two plastic alignment pins on the laptop to help with final alignment.
-                    """
-            )
             .tag(9)
-            
-            GuidePremadeTabView(
-                stepNumber: 11,
-                stepDescription: "Install the Audio Board",
-                imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/IuKx4MRMMnK2W6xu.large"
-                ],
-                bodyText: """
-                    Use your Framework Screwdriver to tighten the captive T5 Torx screw to secure the Audio Board.
-                    
-                    Tighten the screw until it's snug. Don't over-tighten it, or you may strip the screw.
-                    """
-            )
-            .tag(10)
-            
-            GuidePremadeTabView(
-                stepNumber: 12,
-                stepDescription: "Install the Input Cover",
-                imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/qeghD2RMExCxoQUU.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/qmQhD2RMIeGZqnMr.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/q3h1D2RMNPK2W6xu.large"
-                ],
-                bodyText: """
-                    Angle the bottom edge of the Input Cover towards the base of the laptop.
-                    
-                    Align and insert the bottom edge of the Input Cover into the base of the laptop.
-                    
-                    Make sure the slots along the bottom edge of the Input Cover slide into the tabs in the base.
-                    
-                    Lower the Input Cover's top edge onto the laptop until the magnets snap it in place.
-                    
-                    Make sure the Input Cover sits neatly within the laptop frame and no corners are popping up.
-                    """
-            )
-            .tag(11)
-            
-            GuidePremadeTabView(
-                stepNumber: 13,
-                stepDescription: "Close and flip your laptop",
-                imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ZAQUD3RMtXCJvXnB.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/ZGUjD3RMJyK2W6xu.large"
-                ],
-                bodyText: """
-                    Close the laptop lid.
-                    
-                    Flip your laptop face-down on a clean work surface.
-                    """
-            )
-            .tag(12)
-            
-            GuidePremadeTabView(
-                stepNumber: 14,
-                stepDescription: "Tighten the bottom screws",
-                imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/wETZD2RMiJCJvXnB.large",
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/JVBXD2RMUTGZqnMr.large"
-                ],
-                bodyText: """
-                    Use your Framework Screwdriver to tighten the eight captive T5 Torx screws on the bottom of your laptop.
-                    
-                    Tighten the screws until they're snug. Don't over-tighten them, or you may strip the screws.
-                    """
-            )
-            .tag(13)
-            
-            GuidePremadeTabView(
-                stepNumber: 15,
-                stepDescription: "Plug in your laptop",
-                imageURLs: [
-                    "https://d3t0tbmlie281e.cloudfront.net/igi/framework/DYpyD3RMrNK2W6xu.large"
-                ],
-                bodyText: """
-                    The battery ships in shipping mode, so the laptop won't power on until you plug it in first.
-                    
-                    Plug a power supply into any USB-C port on your laptop.
-                    """
-            )
-            .tag(14)
         }
-        .navigationTitle("Audio board")
+        .navigationTitle("Battery")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color(.systemGroupedBackground))
         .tabViewStyle(.page(indexDisplayMode: .never)) // remove dots
@@ -278,5 +195,5 @@ struct FW12RepairAudioBoardView: View {
 }
 
 #Preview {
-    FW12RepairAudioBoardView()
+    FW12RepairBatteryView()
 }
