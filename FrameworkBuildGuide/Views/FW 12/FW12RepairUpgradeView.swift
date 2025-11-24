@@ -135,9 +135,16 @@ struct FW12RepairUpgradeView: View {
             
             Section {
                 NavigationLink {
-                    Text("Coming soon")
+                    FW12RepairInputCoverView()
                 } label: {
                     Label("Input cover", systemImage: "keyboard")
+                }
+            } footer: {
+                Button {
+                    goToURL(url: "https://guides.frame.work/Guide/Input+Cover/435?lang=en")
+                } label: {
+                    Text("Open original guide")
+                        .font(.footnote)
                 }
             }
             
